@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Регистрация команд на турнир</title>
+    <title>Регистрация команды</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -12,33 +12,6 @@
             font-family: 'Roboto', Arial, sans-serif;
             margin: 0;
             padding: 0;
-        }
-        .header {
-            background-color: #111;
-            padding: 20px;
-            margin: 50px auto 0 auto;
-            max-width: 600px;
-            border: 2px solid #cde901;
-            border-radius: 10px;
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        .header img {
-            max-height: 50px;
-            width: auto;
-            display: block;
-        }
-        .header a {
-            color: #cde901;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.1em;
-            margin-left: 20px;
-        }
-        .header a:hover {
-            color: #aacc00;
         }
         .container {
             max-width: 600px;
@@ -95,61 +68,30 @@
             color: #aaa;
             margin-top: 10px;
         }
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 2em;
-            }
-            .container {
-                padding: 15px;
-            }
-            .header {
-                padding: 15px;
-            }
-            .header img {
-                max-height: 40px;
-            }
-        }
     </style>
 </head>
 <body>
-    <div class="header">
-        <img src="images/logo.png" alt="Логотип организации" loading="lazy">
-        <nav>
-            <a href="pravila.html">Правила турнира</a>
-        </nav>
-    </div>
     <div class="container">
-        <h1>Регистрация команды на турнир</h1>
-        <form>
+        <h1>Регистрация команды</h1>
+        <form action="https://formspree.io/f/xwpkqqag" method="POST">
             <label for="team-name">Название команды:</label>
-            <input type="text" id="team-name" name="team-name" required maxlength="50">
+            <input type="text" id="team-name" name="team_name" required maxlength="50">
 
             <label for="captain-name">Имя капитана:</label>
-            <input type="text" id="captain-name" name="captain-name" required maxlength="50">
+            <input type="text" id="captain-name" name="captain_name" required maxlength="50">
 
             <label for="email">Электронная почта капитана:</label>
             <input type="email" id="email" name="email" required>
 
             <label>Состав команды (включая капитана):</label>
-            <input type="text" id="player-1" name="player-1" placeholder="Имя игрока 1 (Капитан)" required>
-            <input type="text" id="player-2" name="player-2" placeholder="Имя игрока 2" required>
-            <input type="text" id="player-3" name="player-3" placeholder="Имя игрока 3" required>
-            <input type="text" id="player-4" name="player-4" placeholder="Имя игрока 4" required>
-            <input type="text" id="player-5" name="player-5" placeholder="Имя игрока 5" required>
-
-            <label for="captain-select">Выберите капитана команды:</label>
-            <select id="captain-select" name="captain-select" required>
-                <option value="">Выберите капитана</option>
-                <option value="player-1">Игрок 1</option>
-                <option value="player-2">Игрок 2</option>
-                <option value="player-3">Игрок 3</option>
-                <option value="player-4">Игрок 4</option>
-                <option value="player-5">Игрок 5</option>
-            </select>
+            <input type="text" id="player-1" name="player_1" placeholder="Имя игрока 1 (Капитан)" required>
+            <input type="text" id="player-2" name="player_2" placeholder="Имя игрока 2" required>
+            <input type="text" id="player-3" name="player_3" placeholder="Имя игрока 3" required>
+            <input type="text" id="player-4" name="player_4" placeholder="Имя игрока 4" required>
+            <input type="text" id="player-5" name="player_5" placeholder="Имя игрока 5" required>
 
             <input type="submit" value="Зарегистрироваться">
         </form>
-        <div class="info">Убедитесь, что все поля заполнены корректно.</div>
     </div>
 </body>
 </html>
